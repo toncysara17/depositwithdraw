@@ -32,33 +32,63 @@ pswdChange(event:any){
   console.log(this.pswd);
   
 }
+login(a:any,p:any){
 
-
-  login(){
-
-    var accno=this.accno;
-    var pswd=this.pswd;
-    let accDetails=this.users;
-    if(accno in accDetails){
-      // console.log(accDetails[accno]["password"]);
-      
-      if(pswd==accDetails[accno]["password"]){
-        alert("Login Successful")
-      }
-      else{
-        alert("Incorrect Password")
-      }
-    }
-
+  var accno=a.value;
+  var pswd=p.value;
+  let accDetails=this.users;
+  if(accno in accDetails){
+    // console.log(accDetails[accno]["password"]);
     
-    else{
-      alert("Invalid Account Number")
+    if(pswd==accDetails[accno]["password"]){
+      alert("Login Successful")
     }
-
-
-
-
-
+    else{
+      alert("Incorrect Password")
+    }
   }
 
+  
+  else{
+    alert("Invalid Account Number")
+  }
+
+
+
+
+
+  alert("Login Clicked")
 }
+
+}
+
+
+//   login(){
+
+//     var accno=this.accno;
+//     var pswd=this.pswd;
+//     let accDetails=this.users;
+//     if(accno in accDetails){
+//       // console.log(accDetails[accno]["password"]);
+      
+//       if(pswd==accDetails[accno]["password"]){
+//         alert("Login Successful")
+//       }
+//       else{
+//         alert("Incorrect Password")
+//       }
+//     }
+
+    
+//     else{
+//       alert("Invalid Account Number")
+//     }
+
+
+
+
+
+//     alert("Login Clicked")
+//   }
+
+// }

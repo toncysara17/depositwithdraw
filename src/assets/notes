@@ -1,5 +1,5 @@
                                         Angular
---------------
+----------------------------------------------------------------------------------------------------------------------
 1. components
 
 2. Module
@@ -11,7 +11,7 @@
 
 4. Data Binding
 
-    ----Two Types-------
+    -----Two Types---------------------------------------------------
 
     4.1. One Way Binding
 
@@ -34,11 +34,14 @@
 
                 Syntax: (eventName)="function call"
                 ----------------------------------------------
-                4.1.2.2-------Event binding using $Event------(eventName)="function call"
+                4.1.2.2-------Event binding using $Event------(eventName)="function call ($event)"
+
+                4.1.2.3 Template Referencing-----------
+                
+                Syntax: #Template-referencing-variable
 
 
+     4.2------ Two Way Binding
 
 
-
-
-    2. two way binding
+2. two way binding
