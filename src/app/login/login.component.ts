@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
   account="Account Number Please";
   accno="";
   pswd="";
-  users={
+  users:any={
     1000:{acno:1000,username:"userone",password:"userone",actype:"savings",balance:5000},
     1001:{acno:1001,username:"usertwo",password:"usertwo",actype:"savings",balance:6000},
     1002:{acno:1002,username:"userthree",password:"userthree",actype:"savings",balance:7000},
@@ -35,7 +35,30 @@ pswdChange(event:any){
 
 
   login(){
-    alert("Login Successful")
+
+    var accno=this.accno;
+    var pswd=this.pswd;
+    let accDetails=this.users;
+    if(accno in accDetails){
+      // console.log(accDetails[accno]["password"]);
+      
+      if(pswd==accDetails[accno]["password"]){
+        alert("Login Successful")
+      }
+      else{
+        alert("Incorrect Password")
+      }
+    }
+
+    
+    else{
+      alert("Invalid Account Number")
+    }
+
+
+
+
+
   }
 
 }
