@@ -1,0 +1,44 @@
+                                        Angular
+--------------
+1. components
+
+2. Module
+
+3.Angular forms
+
+    3.1..... Template driven angular form
+
+
+4. Data Binding
+
+    ----Two Types-------
+
+    4.1. One Way Binding
+
+       4.1.1---- from component to view--
+
+              4.1.1.1------  String Interpolation/Interpolation
+
+                Syntax:{{expression}}
+         -----------------------------------------------------------------
+
+                4.1.1.2-----Property binding:
+
+                Syntax:[binding-target]="binding-source"
+        ---------------------------------------------------------------------
+
+
+       4.1.2---- from view to component
+
+                4.1.2.1--------------Event binding
+
+                Syntax: (eventName)="function call"
+                ----------------------------------------------
+                4.1.2.2-------Event binding using $Event------(eventName)="function call"
+
+
+
+
+
+
+    2. two way binding

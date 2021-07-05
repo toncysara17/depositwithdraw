@@ -1,0 +1,20 @@
+
+
+    <form>
+        
+        <div class="login">
+            <h3>{{aim}}</h3>
+            <h3>Sign In</h3>
+
+            <input type="text" name="acno" id="acno"  (change)= "accChange($event)" [value]="account" placeholder="accountnumber">
+            <br>
+
+
+            <input type="text" name="pswd" id="pswd" (change)="pswdChange($event)" placeholder="password">
+    <br>
+            <button  (click)="login()">Login </button>
+
+
+
+        </div >
+    </form>
