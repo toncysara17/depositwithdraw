@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-login',
@@ -10,85 +12,98 @@ export class LoginComponent implements OnInit {
   account="Account Number Please";
   accno="";
   pswd="";
-  users:any={
-    1000:{acno:1000,username:"userone",password:"userone",actype:"savings",balance:5000},
-    1001:{acno:1001,username:"usertwo",password:"usertwo",actype:"savings",balance:6000},
-    1002:{acno:1002,username:"userthree",password:"userthree",actype:"savings",balance:7000},
+ 
 
-}
-
-  constructor() { }
+  constructor(private router:Router,private ds:DataService) { }
 
   ngOnInit(): void {
   }
-
-  accChange(event:any){
-    this.accno=event.target.value;
-    console.log(this.accno);
-    
-  }
-pswdChange(event:any){
-  this.pswd=event.target.value;
-  console.log(this.pswd);
   
-}
-login(a:any,p:any){
+  login(){ 
 
-  var accno=a.value;
-  var pswd=p.value;
-  let accDetails=this.users;
-  if(accno in accDetails){
-    // console.log(accDetails[accno]["password"]);
-    
-    if(pswd==accDetails[accno]["password"]){
-      alert("Login Successful")
-    }
-    else{
-      alert("Incorrect Password")
+    var acno=this.accno;
+    var pwd=this.pswd;
+
+    let accDetails=this.ds.users;
+
+  var result=this.ds.login(acno,pwd)
+
+    if(result){
+        alert("login successful");
+        this.router.navigateByUrl("dashboard")
     }
   }
-
-  
-  else{
-    alert("Invalid Account Number")
-  }
-
-
-
-
-
-  alert("Login Clicked")
-}
-
 }
 
 
-//   login(){
 
-//     var accno=this.accno;
-//     var pswd=this.pswd;
-//     let accDetails=this.users;
-//     if(accno in accDetails){
-//       // console.log(accDetails[accno]["password"]);
+
+
+
+
+    // }
+    // if(accno in accDetails){
+    //   // console.log(accDetails[accno]["password"]);
       
-//       if(pswd==accDetails[accno]["password"]){
-//         alert("Login Successful")
-//       }
-//       else{
-//         alert("Incorrect Password")
-//       }
-//     }
+    //   if(pswd==accDetails[accno]["password"]){
+    //     alert("Login Successful")
+    //     this.router.navigateByUrl("dashboard");
+    //   }
+    //   else{
+    //     alert("Incorrect Password")
+    //   }
+    // }
 
     
-//     else{
-//       alert("Invalid Account Number")
-//     }
+    // else{
+    //   alert("Invalid Account Number")
+    // }
 
 
 
 
 
-//     alert("Login Clicked")
 //   }
 
 // }
+
+//   accChange(event:any){
+//     this.accno=event.target.value;
+//     console.log(this.accno);
+    
+//   }
+// pswdChange(event:any){
+//   this.pswd=event.target.value;
+//   console.log(this.pswd);
+  
+// }
+
+// // login using template referencing
+
+// login(a:any,p:any){       
+
+//   var accno=a.value;
+//   var pswd=p.value;
+//   let accDetails=this.users;
+//   if(accno in accDetails){
+//     // console.log(accDetails[accno]["password"]);
+    
+//     if(pswd==accDetails[accno]["password"]){
+//       alert("Login Successful")
+//     }
+//     else{
+//       alert("Incorrect Password")
+//     }
+//   }
+
+
+//   else{
+//     alert("Invalid Account Number")
+//   }
+
+//   alert("Login Clicked")
+// }
+
+// }
+
+

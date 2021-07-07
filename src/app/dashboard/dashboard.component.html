@@ -1,0 +1,57 @@
+<!-- <p>dashboard works!</p> -->
+
+<div class="container">
+    <div class="row">
+        <h2></h2>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="main">
+           <h2>Deposit Form</h2>
+        
+<form (ngSubmit)="deposit()">
+    <!-- <input type="text" name="cname" class="form-control"  id="cname" [(ngModel)]="cname" placeholder="Customer Name">
+    <br>  -->
+
+    <input type="text" name="acno" class="form-control" id="acno"[(ngModel)]="acno" placeholder="confirm account number">
+    <br>
+    <input type="password" name="cname" class="form-control"  id="pwd" [(ngModel)]="pwd" placeholder="Password">
+    <br>
+
+    <input type="text" name="amt" class="form-control" id="amt"[(ngModel)]="amt" placeholder="amount">
+    <br>
+    <button class="item btn btn-success btn-block">Deposit</button>
+    
+    </form>
+
+</div>
+</div>
+<div class="col-md-4"></div>
+</div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="main">
+
+            <h2>Withdraw Form</h2>
+    <form (ngSubmit)="withdraw()">
+        <!-- <input type="text" name="cname1"   class="form-control"id="cname1"[(ngModel)]="cname1" placeholder="Customer Name">
+        <br> -->
+    
+        <input type="text" name="acno1" class="form-control" id="acno1" [(ngModel)]="acno1" placeholder="confirm account number">
+        <br>
+        <input type="password" name="pwd1" class="form-control" id="pwd1" [(ngModel)]="pwd1" placeholder="Password">
+<br>
+    
+        <input type="text" name="amt1" class="form-control" id="amt1" placeholder="amount">
+        <br>
+        <button class="item btn btn-success btn-block">Withdraw</button>
+        </form>
+
+    </div>
+</div>
+<div class="col-md-4"></div>
+</div>
+</div>

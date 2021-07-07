@@ -1,0 +1,31 @@
+<!-- <p>register works!</p> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="main">
+
+
+
+
+                <h4>Account Create</h4>
+
+                <form  (ngSubmit)="register()">
+                    <!-- [(ngModel)]="uname" -->
+                    <input type="text" class="form-control" name="acno" id="username" name="uname" [(ngModel)]="uname"
+                        placeholder="enter name"><br>
+                    <input type="text"  class="form-control"name="acno" id="acno" name="acc" [(ngModel)]="acno"
+                        placeholder="accountnumber"><br>
+                    <input type="text" class="form-control" name="uname" id="acctype" name="acctype" [(ngModel)]="acctype"
+                        placeholder="Account Type"><br>
+                    <input type="text" class="form-control" name="pswd" id="pswd" name="pswd" [(ngModel)]="pwd" placeholder="password"><br>
+                    <button class="item btn btn-success btn-block">Register</button>
+                </form>
+
+
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

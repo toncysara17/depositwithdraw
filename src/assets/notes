@@ -1,12 +1,19 @@
                                         Angular
 ----------------------------------------------------------------------------------------------------------------------
-1. components
+1. components:root---App component
 
-2. Module
+2. Module: root-----App Module
 
-3.Angular forms
+3.Angular forms---------means web page
 
     3.1..... Template driven angular form
+    3.2------Reactive forms----ReactiveFormsModule
+
+        3.2.1----- form group
+        3.2.2----- form array
+        3.2.3------ form control
+
+
 
 
 4. Data Binding
@@ -43,5 +50,15 @@
 
      4.2------ Two Way Binding
 
+        4.2.1----- ngmodel - FormsModule,
 
-2. two way binding
+            Syntax: [(ngmodel)]="Property-name"
+            -------------------------------------------------------------------
+
+
+5--------Routing
+
+6-----Dependency Injection/ inversion of control
+
+7.....
+

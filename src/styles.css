@@ -1,15 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
 
-
-body{
-    background-color: skyblue;
+.box1{
+    border-radius: 15px;
+    border-style: solid;
+    background-color: #8942C1;
+    color: #ffffff;
+    width: 100%;
+    border-width: 0.5px;
+    margin-top: 20%;
+    padding: 20px;
+    
 }
-.login{
-    background-color: white;
-    width:300px;
-    position: absolute;
-    padding-bottom: 200px;
-    margin-left: 200px;
-    text-align: center;  
-}
+.img{
+    height :200px;
+    width: 200px;
 
+}
+.main{
+    border-radius: 15px;
+    border-style: solid;
+    background-color: #8942C1;
+    color: #ffffff;
+    width: 100%;
+    border-width: 0.5px;
+    margin-top: 20%;
+    padding: 20px;
+    
+}

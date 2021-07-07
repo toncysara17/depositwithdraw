@@ -1,22 +1,37 @@
-
-
-    <div class="container">
-        <div class="row">
-        
-        <div class="login">
-            <h3>{{aim}}</h3>
-            <h3>Sign In</h3>
-
-            <input type="text" name="acno" id="acno" #accno (change)= "accChange($event)" [value]="account" placeholder="accountnumber">
-            <br>
-                                                                            
-
-            <input type="text" name="pswd" id="pswd" #pswd (change)="pswdChange($event)" placeholder="password">
-    <br>
-            <button  (click)="login(accno,pswd)">Login </button>
-
-
-</div>
-        </div >
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="img">
+            <img src="../../assets/loginback.jpg">
         </div>
 
+
+
+        <div class="col-md-4">
+
+            <div class="box1">
+                <h3 id="aim">{{aim}}</h3>
+                <h4>Sign In</h4>
+                <form (ngSubmit)="login()">
+                    <!-- #accno----templatereferencing -->
+                    <input class="form-control" type="text" name="acno" id="acno" name="acno" [(ngModel)]="accno"
+                        [value]="account" placeholder="accountnumber">
+                    <!-- (change)= "accChange($event)" ---one way event binding-->
+                    <br>
+
+                    <!-- #pswd templatereferencing -->
+                    <!-- (change)="pswdChange($event)----one way event binding -->
+                    <input type="text" class="form-control" name="pswd" id="pswd" name="pswd" [(ngModel)]="pswd"
+                        placeholder="password">
+                    <br>
+                    <button class="item btn btn-success btn-block">Login</button>
+                    <!-- <button  (click)="login()">Login </button> -->
+                    <!-- login(accno,pswd)template referencing -->
+                    <a routerLink="register">Sign Up</a>
+
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
